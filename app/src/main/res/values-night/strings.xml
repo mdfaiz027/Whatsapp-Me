@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="whatsapp_me">WhatsApp Me</string>
+    <string name="Logo">TODO</string>
+    <string name="phone_number">Phone number with Country code</string>
+    <string name="open_chat">Open Chat</string>
+</resources>
