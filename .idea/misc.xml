@@ -8,9 +8,14 @@
         <entry key="app/src/main/res/drawable/whatapp_logo.xml" value="0.1445" />
         <entry key="app/src/main/res/layout/activity_history.xml" value="0.22948717948717948" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2522768670309654" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2304403591278324" />
+        <entry key="app/src/main/res/layout/drawer_header.xml" value="0.24102564102564103" />
+        <entry key="app/src/main/res/layout/header_navigation_drawer.xml" value="0.24102564102564103" />
         <entry key="app/src/main/res/layout/history_page.xml" value="0.22863247863247863" />
         <entry key="app/src/main/res/layout/mobile_list_layout.xml" value="0.24188034188034188" />
+        <entry key="app/src/main/res/menu/drawer_menu.xml" value="0.24188034188034188" />
+        <entry key="app/src/main/res/menu/menu_items.xml" value="0.24188034188034188" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/whatsapp_me_logo.xml" value="0.148" />
       </map>
     </option>

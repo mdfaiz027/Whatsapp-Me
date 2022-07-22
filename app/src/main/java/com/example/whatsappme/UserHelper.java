@@ -33,14 +33,18 @@ public class UserHelper extends SQLiteOpenHelper {
 
     }
 
-    public long createMethod(SQLiteDatabase db,String Mobile_number, String Time)
-    {
-        ContentValues cv=new ContentValues();
-        cv.put("Mobile_number",Mobile_number);
+    public long createMethod(SQLiteDatabase db, String Mobile_number, String Time) {
+        ContentValues cv = new ContentValues();
+        cv.put("Mobile_number", Mobile_number);
         cv.put("Time", Time);
 
-        long set=db.insert("WhatsappMe_table",null,cv);
+        long set = db.insert("WhatsappMe_table", null, cv);
         return set;
     }
 
+    public long deleteMethod(SQLiteDatabase db) {
+        //db.execSQL("delete from WhatsappMe_table");
+        long set = db.delete("WhatsappMe_table",null, null);
+        return set;
+    }
 }

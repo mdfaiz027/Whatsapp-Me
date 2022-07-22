@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         userHelper=new UserHelper(this);
         db=userHelper.getWritableDatabase();
 
+        //Adding the visibility method to the switch
+
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -57,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         });
+
+        //On click listener method for the chat button
 
         openChatBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                             intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+inputPhoneNumber+"&text="+inputAddMsg));
                             startActivity(intent);
 
-                            //add the number in the history
+                            //adding the number in the history
                             long set=userHelper.createMethod(db,inputPhoneNumber,time);
 
                         }
@@ -100,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
                             //adding the number in the history
                             long set=userHelper.createMethod(db,inputPhoneNumber,time);
 
-
                         }
                         catch (Exception e){
                             e.printStackTrace();
@@ -110,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
+        //On click listener for the history button
         
         historyBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,12 +124,11 @@ public class MainActivity extends AppCompatActivity {
         });
         }
 
-    private String getTime() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat(
+        //Created the method to get the current time
 
-                "yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-
-        Date date = new Date();
-        return dateFormat.format(date);
-    }
+        private String getTime() {
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+            Date date = new Date();
+            return dateFormat.format(date);
+        }
 }

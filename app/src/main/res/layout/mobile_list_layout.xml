@@ -11,6 +11,6 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:text="Phono number"
-        android:textColor="@color/teal_700"/>
+        android:textColor="@color/black"/>
 
 </LinearLayout>
