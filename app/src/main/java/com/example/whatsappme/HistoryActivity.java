@@ -31,7 +31,7 @@ public class HistoryActivity extends AppCompatActivity {
     HistoryAdapter historyAdapter;
     List<HistoryModel> historyModelList = new ArrayList<>();
 
-    String mobile;
+    String mobile, time;
 
     @SuppressLint("Range")
 
@@ -58,9 +58,10 @@ public class HistoryActivity extends AppCompatActivity {
             while (cursor.moveToNext()) {
 
                 mobile = cursor.getString(cursor.getColumnIndex("Mobile_number"));
+                time = cursor.getString(cursor.getColumnIndex("Time"));
                 //@SuppressLint("Range") String time = cursor.getString(cursor.getColumnIndex("Time"));
 
-                historyModel = new HistoryModel("" + mobile);
+                historyModel = new HistoryModel("" + mobile, ""+time);
                 historyModelList.add(historyModel);
                 historyAdapter = new HistoryAdapter(getApplicationContext(), historyModelList);
                 listView.setAdapter(historyAdapter);

@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     SQLiteDatabase db;
     UserHelper userHelper;
+    String time = getTime();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,8 +70,6 @@ public class MainActivity extends AppCompatActivity {
                 String inputPhoneNumber = phoneNumber.getText().toString();
                 String inputAddMsg = addMsg.getText().toString();
 
-                String time = getTime();
-
                     if(inputPhoneNumber.trim().equals(""))
                     {
                         phoneNumber.setError("Enter the phone number!");
@@ -87,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(intent);
 
                             //adding the number in the history
-                            long set=userHelper.createMethod(db,inputPhoneNumber,time);
+                            userHelper.createMethod(db,inputPhoneNumber,time);
 
                         }
                         catch (Exception e){
@@ -102,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(intent);
 
                             //adding the number in the history
-                            long set=userHelper.createMethod(db,inputPhoneNumber,time);
+                            userHelper.createMethod(db,inputPhoneNumber,time);
 
                         }
                         catch (Exception e){
@@ -127,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         //Created the method to get the current time
 
         private String getTime() {
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss", Locale.getDefault());
             Date date = new Date();
             return dateFormat.format(date);
         }

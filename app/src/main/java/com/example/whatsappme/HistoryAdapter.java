@@ -43,7 +43,9 @@ public class HistoryAdapter extends BaseAdapter {
 
         View root = layoutInflater.inflate(R.layout.mobile_list_layout, null);
         TextView phoneNumber = root.findViewById(R.id.phone_number);
+        TextView time = root.findViewById(R.id.time);
         phoneNumber.setText(""+historyModelList.get(i).getMobileNumber());
+        time.setText(""+historyModelList.get(i).getTime());
 
         return root;
     }

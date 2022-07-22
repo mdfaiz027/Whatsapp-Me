@@ -1,10 +1,11 @@
 package com.example.whatsappme;
 
 public class HistoryModel {
-    String mobileNumber;
+    String mobileNumber, time;
 
-    public HistoryModel(String mobileNumber) {
+    public HistoryModel(String mobileNumber, String time) {
         this.mobileNumber = mobileNumber;
+        this.time = time;
     }
 
     public String getMobileNumber() {
@@ -13,5 +14,13 @@ public class HistoryModel {
 
     public void setMobileNumber(String mobileNumber) {
         this.mobileNumber = mobileNumber;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }

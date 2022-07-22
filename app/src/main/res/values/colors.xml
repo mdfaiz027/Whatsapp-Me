@@ -11,5 +11,6 @@
     //Added Colors
     <color name="whatsapp_green">#128C7E</color>
     <color name="sushi_palette">#EEEEEE</color>
+    <color name="dark_gray">#2C3E50</color>
 
 </resources>
