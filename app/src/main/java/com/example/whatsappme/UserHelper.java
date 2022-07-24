@@ -47,4 +47,15 @@ public class UserHelper extends SQLiteOpenHelper {
         long set = db.delete("WhatsappMe_table",null, null);
         return set;
     }
+
+    public long updateMethod(SQLiteDatabase db,String Mobile_number, String Time)
+    {
+        ContentValues cv=new ContentValues();
+        cv.put("Mobile_number", Mobile_number);
+        cv.put("Time", Time);
+
+        long set=db.update("WhatsappMe_table",cv,"Time="+Time, null);
+        return set;
+    }
+
 }

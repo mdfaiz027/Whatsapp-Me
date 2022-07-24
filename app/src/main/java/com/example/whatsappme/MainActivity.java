@@ -29,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
     SQLiteDatabase db;
     UserHelper userHelper;
-    String time = getTime();
+    //String time = getTime();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
                 public void onClick(View view) {
 
+                String time = getTime();
                 String inputPhoneNumber = phoneNumber.getText().toString();
                 String inputAddMsg = addMsg.getText().toString();
 
@@ -87,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
 
                             //adding the number in the history
                             userHelper.createMethod(db,inputPhoneNumber,time);
-
                         }
                         catch (Exception e){
                             e.printStackTrace();
@@ -102,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
 
                             //adding the number in the history
                             userHelper.createMethod(db,inputPhoneNumber,time);
-
                         }
                         catch (Exception e){
                             e.printStackTrace();
@@ -130,4 +130,5 @@ public class MainActivity extends AppCompatActivity {
             Date date = new Date();
             return dateFormat.format(date);
         }
+
 }
